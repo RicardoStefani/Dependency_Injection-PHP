@@ -15,7 +15,7 @@ class MainFactory
 		];
 	}
 
-	public static function build($class)
+	public static function BUILD($class)
 	{
 		$instance = null;
 
@@ -32,7 +32,7 @@ class MainFactory
 
 				foreach ($dependencies as $dependence)
 				{
-					$args[] = $this->build($dependence);
+					$args[] = self::BUILD($dependence);
 				}
 
 				try

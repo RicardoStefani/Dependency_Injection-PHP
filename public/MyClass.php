@@ -1,11 +1,11 @@
 <?php
-//namespace Classes;
 
 class MyClass
 {
-    public function __construct()
+    public function __construct($injectable_class)
     {
-        echo "Created MyClass";
+        echo "<br/>Created MyClass<br/>";
+        $injectable_class->Hello("MyClass");
     }
 }
 
